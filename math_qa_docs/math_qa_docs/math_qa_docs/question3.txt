@@ -1,9 +1,0 @@
-Question:
-What is the integral of f(x) = 2x with respect to x?
-
-Step-by-step solution:
-1. Recall the integral formula: ∫ x^n dx = (x^(n+1))/(n+1) + C, where C is the constant of integration.
-2. For f(x) = 2x, rewrite as 2 * x^1.
-3. Integrate:
-   ∫ 2x dx = 2 * ∫ x dx = 2 * (x^2 / 2) + C = x^2 + C.
-4. Therefore, the integral of 2x with respect to x is x^2 + C.

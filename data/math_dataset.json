@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "question": "What is 2 + 2?",
+        "solution": "The answer is 4."
+    },
+    {
+        "id": 2,
+        "question": "Solve for x: 2x + 5 = 11",
+        "solution": "Subtract 5 from both sides: 2x = 11 - 5, 2x = 6. Divide by 2: x = 6 / 2, x = 3."
+    },
+    {
+        "id": 3,
+        "question": "What is the value of x: x - 3 = 7",
+        "solution": "Add 3 to both sides: x = 7 + 3, x = 10."
+    }
+]
