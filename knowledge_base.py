@@ -1,5 +1,5 @@
 from qdrant_client import QdrantClient
-from llama_index import GPTVectorStoreIndex, SimpleDirectoryReader, LLMPredictor, ServiceContext
+from llama_index import VectorStoreIndex, SimpleDirectoryReader, LLMPredictor, ServiceContext
 from langchain.llms import OpenAI
 
 class KnowledgeBase:
@@ -15,10 +15,12 @@ class KnowledgeBase:
         documents = SimpleDirectoryReader('math_qa_docs').load_data()
         llm_predictor = LLMPredictor(llm=OpenAI(temperature=0))
         service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
-        return GPTVectorStoreIndex.from_documents(documents, service_context=service_context)
+        return VectorStoreIndex.from_documents(documents, service_context=service_context)
+
 
     def query(self, question: str) -> str:
         response = self.index.query(question, similarity_top_k=1)
         if response.response.strip():
             return response.response
         return None
+
